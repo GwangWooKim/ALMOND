@@ -1,0 +1,27 @@
+{
+    "dtype": "copula",
+    "dim": "copula",
+    "batch_size": 1000,
+    "x_dim": 11,
+    "h_dims": [
+        128,
+        256
+    ],
+    "z_dim": 5,
+    "u_dim": 5,
+    "ftype": "VAE",
+    "act": "Softplus(beta=1.0, threshold=20.0)",
+    "num_samples": 100,
+    "burn_in": 20,
+    "step_size": 0.01,
+    "sigma2": "[0.01]",
+    "fix_dim": 5,
+    "fix_bias": false,
+    "rand_dim": 5,
+    "lr": 0.0001,
+    "epochs": 2000,
+    "warmups": 2000,
+    "seed": 42,
+    "name": "anode22",
+    "device": "cuda"
+}
