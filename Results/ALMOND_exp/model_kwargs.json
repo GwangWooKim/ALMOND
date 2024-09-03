@@ -1,0 +1,26 @@
+{
+    "dtype": "exp",
+    "dim": 1,
+    "batch_size": 1000,
+    "x_dim": 1,
+    "h_dims": [
+        10
+    ],
+    "z_dim": 1,
+    "u_dim": 1,
+    "ftype": "ALMOND",
+    "act": "Softplus(beta=1.0, threshold=20.0)",
+    "num_samples": 100,
+    "burn_in": 10,
+    "step_size": 0.01,
+    "sigma2": "[0.20724341]",
+    "fix_dim": 5,
+    "fix_bias": false,
+    "rand_dim": 1,
+    "lr": 0.01,
+    "epochs": 1000,
+    "warmups": 100,
+    "seed": 42,
+    "name": "anode22",
+    "device": "cuda"
+}
