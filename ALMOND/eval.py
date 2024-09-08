@@ -178,6 +178,12 @@ def eval_1d(model, u, train_loader, save, title = None, save_path = None):
     # quantative result
     ks, wd = cal_distances(generated.reshape(-1, ), u.reshape(-1, ), model.dtype)
     dist = {'ks' : ks, 'wd' : wd}
+
+    # compact domain check
+    if model.dtype == 'exp':
+        fp = (generated < 0).sum() / len(generated)
+        dist['fp'] = fp
+
     if save:
         with open(f'{save_path}/distances.json', 'w') as f: 
             json.dump(dist, f, indent=4)
